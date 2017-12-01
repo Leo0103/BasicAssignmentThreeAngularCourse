@@ -7,11 +7,16 @@ import { Component, OnInit } from '@angular/core';
 })
 export class DetailButtonComponent implements OnInit {
 allowButtonToBeClicked = false;
-
+serverCreationStatus = 'No server was created!';
+serverName = 'Testserver';
+serverCreated = false;
 
   constructor() { }
 
   ngOnInit() {
   }
-
+  onCreateServer() {
+    this.serverCreated = true;
+    
+  }
 }

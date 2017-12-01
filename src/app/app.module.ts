@@ -5,13 +5,11 @@ import { HttpModule } from '@angular/http';
 
 import { AppComponent } from './app.component';
 import { DetailButtonComponent } from './detail-button/detail-button.component';
-import { ParagraphDisplayComponent } from './paragraph-display/paragraph-display.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    DetailButtonComponent,
-    ParagraphDisplayComponent
+    DetailButtonComponent
   ],
   imports: [
     BrowserModule,
