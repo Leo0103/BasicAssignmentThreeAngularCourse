@@ -10,13 +10,19 @@ allowButtonToBeClicked = false;
 serverCreationStatus = 'No server was created!';
 serverName = 'Testserver';
 serverCreated = false;
+servers: number = 0;
+createArray = [];
+
 
   constructor() { }
 
   ngOnInit() {
   }
-  onCreateServer() {
-    this.serverCreated = true;
-    
+  onClick() {
+    this.serverCreated = !this.serverCreated;
+    this.createArray.push(this.createArray.length + 1);
+    console.log(this.createArray);
   }
+
+
 }
