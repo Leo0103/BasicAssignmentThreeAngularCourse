@@ -1,7 +1,14 @@
 <div>
   <button class="btn btn-primary"
-  (click)="onCreateServer()">
+  (click)= "onClick()">
     Displays Details
   </button>
 </div>
-<p *ngIf="serverCreated">hello</p>
+<p *ngIf="serverCreated; else noServer">hello</p>
+<ng-template #noServer>
+<p>bye!</p>
+</ng-template>
+<p *ngFor = 'let data of createArray' [ngStyle] = "{backgroundColor: data >= 5 ? 'blue' : 'white'}"
+  [ngClass] = "{'white-text': data >= 5}"
+  >ive now have {{ createArray }}</p>
+<app-parapgraph *ngFor="let server of servers"></app-parapgraph>
